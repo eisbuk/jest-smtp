@@ -17,7 +17,7 @@ declare global {
   }
 }
 
-expect.extend({
+export const matchers = {
   toHaveReceivedEmails(received: JestSMTPServer, num: number) {
     if (received.emails.length === num) {
       return {
@@ -57,4 +57,4 @@ expect.extend({
       pass: false,
     };
   },
-});
+}
